@@ -6,7 +6,7 @@ using UnityEngine;
 public class PipeMovement : MonoBehaviour
 {
 
-    public float pipeSpeed = 3f;
+    public static float pipeSpeed;
     public float screenStartX;
     public float screenEndX;
 
