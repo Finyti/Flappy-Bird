@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class BirdController : MonoBehaviour
 {
+    public int Score;
     public float BirdSpeed = 12f;
     public float RotateScale;
+    public TextMeshPro ScoreText;
 
     Rigidbody2D rb;
 
@@ -35,5 +38,11 @@ public class BirdController : MonoBehaviour
     {
         var curretScene  = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(curretScene);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Score++;
+        ScoreText.text = Score.ToString();
     }
 }

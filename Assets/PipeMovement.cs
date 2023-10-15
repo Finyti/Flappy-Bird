@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PipeMovement : MonoBehaviour
 {
-    public int Score;
+
     public float pipeSpeed = 3f;
     public float screenStartX;
     public float screenEndX;
+
 
 
     void Start()
@@ -28,8 +30,5 @@ public class PipeMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Score++;
-    }
+
 }
